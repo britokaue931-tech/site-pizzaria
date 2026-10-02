@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sophia Pizzaria & Esfiharia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="hd"><div class="w nav">
+<a href="#topo" aria-label="Sophia, início"><img class="brand-logo" data-image-key="logo" alt="Sophia Pizzaria & Esfiharia"></a>
+<ul><li><a href="#cardapio">Cardápio</a></li><li><a href="#meio">Monte sua pizza</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#visite">Visite</a></li></ul>
+<button class="cb" id="abre" aria-label="Abrir pedido"><span class="cb-label">Pedido</span><b id="n" aria-live="polite">0</b><span class="cb-status">18h-23h30</span></button>
+</div></header>
+
+<div class="top-alert" id="horario" aria-live="polite">Verificando horário de funcionamento...</div>
+
+<main id="topo">
+<section class="hero"><div class="w">
+<div class="hero-copy">
+<div class="eyebrow">Pizzaria &amp; Esfiharia</div>
+<h1 aria-label="Meia calabresa, meia queijo. Você manda."><span><i>Meia calabresa,</i></span><span><i>meia queijo.</i></span><span class="lead"><i>Você manda.</i></span></h1>
+<p class="p">Pizzas de 4 a 70 fatias, esfihas salgadas e doces, sem pedido mínimo. Monte seu pedido aqui Agora mesmo.</p>
+<div class="bt"><a class="btn" href="#cardapio">Montar pedido</a><a class="btn o" href="#meio">Monte sua pizza</a></div>
+</div>
+<div class="dome has-photo" id="dome" aria-hidden="true"><div class="a"></div><div class="b"></div><div class="l"><img class="dome-photo" data-image-key="pizza" alt="Pizza da Sophia" width="640" height="640" fetchpriority="high"><span class="dome-wordmark"><strong>Sophia</strong><small>Pizzaria &amp; Esfiharia</small></span></div></div>
+</div></section>
+
+<div class="dif"><div class="w"><ul>
+<li>Pequena 25cm<small>1 sabor, 4 fatias</small></li><li>Grande 35cm<small>até 2 sabores, 8 fatias</small></li><li>Pizza Metro<small>até 6 sabores, 70 fatias</small></li><li>Esfihas<small>salgadas e doces</small></li></ul></div></div>
+
+<section id="galeria"><div class="w"><h2>Nossas pizzas</h2><div class="gal"><figure class="slot"><img data-image-key="marguerita" alt="Pizza Marguerita" loading="lazy" width="640" height="800"><figcaption>Marguerita</figcaption></figure><figure class="slot"><img data-image-key="pizza" alt="Pizza da Sophia" loading="lazy" width="640" height="800"><figcaption>Pizza da casa</figcaption></figure><figure class="slot"><img data-image-key="otherPizza" alt="Outras pizzas da Sophia" loading="lazy" width="640" height="800"><figcaption>Mais sabores</figcaption></figure></div></div></section>
+
+<section class="sobre" id="sobre"><div class="w g">
+<h2>Pizzaria com <span>alma de esfiharia.</span></h2>
+<p class="p">A Sophia junta o forno da pizza com o sabor da esfiha aberta. As cúpulas da nossa marca vêm dessa mistura: uma casa com identidade própria, recheio de verdade e massa feita para você querer voltar.</p>
+</div></section>
+
+<section id="cardapio"><div class="w">
+<h2>Cardápio</h2>
+<div class="tabs" role="tablist" aria-label="Categorias"></div>
+<input id="bus" type="search" placeholder="Pesquise o sabor pelo nome" aria-label="Pesquisar sabor" hidden>
+<p class="p" id="nota" hidden style="margin-bottom:16px"></p>
+<ul class="menu" id="menu"></ul>
+</div></section>
+
+<section class="mm" id="meio"><div class="w g">
+<div class="pz" id="pz" aria-hidden="true"><img class="pizza-preview-photo" data-image-key="pizzaPreview" alt="" aria-hidden="true" width="640" height="640"></div>
+<div class="builder-panel">
+<div class="builder-header"><h2>Monte sua pizza</h2><span class="badge">Personalize</span></div>
+<p class="p" id="info"></p>
+<div class="builder-form">
+<label for="tam">Tamanho</label><select id="tam"><option value="0">Pequena 25cm</option><option value="1">Grande 35cm</option><option value="2">Pizza Metro</option></select>
+<div id="fl"></div><div id="bdw"><label for="bd" id="bdl">Borda recheada (opcional)</label><select id="bd"><option value="">Sem borda recheada</option><option>Goiabada</option><option>Cream Cheese</option><option>Avelã</option><option>Doce de Leite</option><option>Chocolate Branco</option><option>Chocolate Preto</option><option>Catupiry</option></select></div>
+<div class="tot-block"><span>Total estimado</span><div class="tot" id="tot"></div></div>
+<button class="btn" id="addm">Adicionar ao pedido</button></div>
+</div>
+</div></section>
+
+<section class="faixa" id="faixa"><div class="st"><div class="circ" id="circ"></div>
+<div class="tx" id="tx"><h2>Bateu a fome?</h2>
+<div class="passos"><span>1. Escolha</span><span>2. Envie pelo WhatsApp</span><span>3. Receba</span></div>
+<div class="delivery-note">Entrega rápida · sabor em minutos · sem pedido mínimo</div>
+<button class="btn" id="abre2">Ver meu pedido</button></div></div></section>
+
+<section class="vis" id="visite"><div class="w g">
+<div class="visit-copy"><h2>Visite a Sophia</h2><p class="p">Peça pelo site ou venha comer com a gente.</p></div>
+<div class="visit-card">
+<dl>
+<div><dt>Unidade</dt><dd>UNIDADE 01 · MANDACARU</dd></div>
+<div><dt>Endereço</dt><dd>📍 Av. Dom Manuel Paiva, 231</dd></div>
+<div><dt>Horários</dt><dd>⏰ Todos os dias · 18:00 às 23:30</dd></div>
+<div><dt>Pedido</dt><dd>Sem pedido mínimo · Combos só no delivery.</dd></div>
+<div><dt>Instagram</dt><dd>@sophiapizzariaa</dd></div>
+</dl>
+<div class="bt"><a class="btn" href="https://wa.me/5583996747088?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido." target="_blank" rel="noopener noreferrer">WhatsApp</a><a class="btn" href="https://www.instagram.com/sophiapizzariaa/" target="_blank" rel="noopener noreferrer">Instagram</a><a class="btn o" href="https://www.google.com/maps/search/?api=1&query=Av.+Dom+Manuel+Paiva+231" target="_blank" rel="noopener noreferrer">Endereço</a></div>
+</div>
+</div></section>
+</main>
+
+<footer><div class="w"><img class="brand-logo" data-image-key="logo" alt="Sophia Pizzaria & Esfiharia"><p><a href="https://www.instagram.com/sophiapizzariaa/" target="_blank" rel="noopener noreferrer">@sophiapizzariaa</a></p></div></footer>
+
+<div class="ov" id="ov"></div>
+<aside class="dr" id="dr" aria-label="Seu pedido" aria-hidden="true" inert>
+<header><h2>Seu pedido</h2><button class="x" id="fecha" aria-label="Fechar">×</button></header>
+<ul id="lista"></ul>
+<button class="clear-order" id="clear-order" type="button">Limpar pedido</button>
+<div class="checkout-fields">
+<label for="recebimento">Como deseja receber?</label>
+<select id="recebimento"><option value="Entrega">Entrega</option><option value="Retirada no local">Retirada no local</option></select>
+<div id="endereco-group"><label for="endereco">Endereço para entrega</label><input id="endereco" type="text" autocomplete="street-address" placeholder="Rua, número e bairro" required></div>
+<label for="pagamento">Forma de pagamento</label>
+<select id="pagamento" required><option value="" disabled selected>Selecione</option><option>Pix</option><option>Cartão</option><option>Dinheiro</option></select>
+<div id="troco-group" hidden><label for="troco">Troco para quanto? (opcional)</label><input id="troco" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Ex.: 100,00"></div>
+<div id="metro-schedule" hidden>
+<label for="metro-data">Data para a Pizza Metro (mínimo 3h de antecedência)</label>
+<input id="metro-data" type="date">
+<label for="metro-hora">Horário desejado</label>
+<input id="metro-hora" type="time">
+</div>
+<p class="checkout-note">Taxa, área de entrega e previsão são confirmadas pelo WhatsApp antes do preparo. Seus dados serão usados para atender este pedido e enviados pelo WhatsApp.</p>
+</div>
+<textarea id="obs" rows="2" placeholder="Observações (sem cebola, endereço, troco...)"></textarea>
+<div class="rt"><span>Total estimado</span><span id="soma">R$ 0,00</span></div>
+<button class="btn" id="envia">Enviar pelo WhatsApp</button>
+</aside>
+<button class="mobile-order" id="mobile-order" type="button" hidden><span>Ver pedido</span><strong id="mobile-order-summary">0 itens · R$ 0,00</strong></button>
+<dialog id="combo-dialog" aria-labelledby="combo-title">
+<form id="combo-form">
+<div class="combo-heading"><h2 id="combo-title">Pizza P + esfiha doce + Guaraná L</h2><button class="x" id="combo-cancel" type="button" aria-label="Fechar">×</button></div>
+<p class="combo-price" id="combo-price-p"></p>
+<p class="combo-terms">Só delivery. Não disponível para consumo em loja.</p>
+<label for="combo-pizza">Sabor da pizza P</label>
+<select id="combo-pizza" name="pizza" required>
+<option value="" disabled selected>Escolha 1 sabor</option>
+<option>Vegetariana</option><option>Tropical</option><option>Mussarela</option><option>Marguerita</option><option>Milho Verde</option><option>Mexicana</option><option>Paulista</option><option>Pepperoni</option><option>Portuguesa</option><option>4 Queijos</option><option>5 Queijos</option><option>Ricord</option><option>Salame</option><option>Siciliana</option><option>Tomate Seco</option>
+</select>
+<label for="combo-sweet">Sabor da esfiha doce</label>
+<select id="combo-sweet" name="sweet" required><option value="" disabled selected>Escolha 1 sabor</option></select>
+<label for="combo-note">Observações</label>
+<textarea id="combo-note" name="note" rows="2" maxlength="220" placeholder="Alguma preferência para este combo?"></textarea>
+<button class="btn" type="submit">Adicionar ao pedido</button>
+</form>
+</dialog>
+<dialog id="combo-g-dialog" aria-labelledby="combo-g-title">
+<form id="combo-g-form">
+<div class="combo-heading"><h2 id="combo-g-title">Pizza G + 2 esfihas (Banana Nevada)</h2><button class="x" id="combo-g-cancel" type="button" aria-label="Fechar">×</button></div>
+<p class="combo-price" id="combo-price-g"></p>
+<p class="combo-terms">Pizza G com 2 sabores e 2 esfihas doces Banana Nevada.<br>Só delivery. Não disponível para consumo em loja.</p>
+<label for="combo-g-pizza-1">Sabor 1 da pizza</label>
+<select id="combo-g-pizza-1" name="pizza-1" required><option value="" disabled selected>Escolha 1 sabor</option></select>
+<label for="combo-g-pizza-2">Sabor 2 da pizza</label>
+<select id="combo-g-pizza-2" name="pizza-2" required><option value="" disabled selected>Escolha 1 sabor</option></select>
+<label for="combo-g-note">Observações</label>
+<textarea id="combo-g-note" name="note" rows="2" maxlength="220" placeholder="Alguma preferência para este combo?"></textarea>
+<button class="btn" type="submit">Adicionar ao pedido</button>
+</form>
+</dialog>
+<dialog id="promo-combo-dialog" aria-labelledby="promo-combo-title">
+<form id="promo-combo-form">
+<div class="combo-heading"><h2 id="promo-combo-title">Pizza Grande 35 cm + Guaraná + 2 Banana Nevada</h2><button class="x" id="promo-combo-cancel" type="button" aria-label="Fechar">×</button></div>
+<p class="combo-price" id="promo-combo-price"></p>
+<p class="combo-terms">Pizza Grande 35 cm com até 2 sabores + 1 Guaraná litro + 2 esfihas Banana Nevada.<br>Só delivery. Não disponível para consumo em loja.</p>
+<label for="promo-combo-pizza">Sabor principal da Pizza Grande</label>
+<select id="promo-combo-pizza" name="pizza" required><option value="" disabled selected>Escolha 1 sabor</option></select>
+<label for="promo-combo-flavor">Sabor adicional (opcional)</label>
+<select id="promo-combo-flavor" name="flavor"><option value="">Sem sabor adicional</option></select>
+<label for="promo-combo-note">Observações</label>
+<textarea id="promo-combo-note" name="note" rows="2" maxlength="220" placeholder="Alguma preferência para este combo?"></textarea>
+<button class="btn" type="submit">Adicionar ao pedido</button>
+</form>
+</dialog>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="script.js"></script>
+<noscript><p class="no-script">O cardápio interativo precisa de JavaScript. Para pedir, fale diretamente pelo <a href="https://wa.me/5583996747088">WhatsApp da Sophia</a>.</p></noscript>
+</body>
+</html>
